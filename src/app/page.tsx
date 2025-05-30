@@ -5,7 +5,7 @@ import { PlayIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
   return (
-    <div className='relative h-full overflow-hidden bg-gradient-to-b lg:h-[140vh]'>
+    <div className='relative h-full overflow-hidden bg-gradient-to-b from-transparent to-black lg:h-[140vh]'>
       <Header />
       <main className='relative pb24 pl-4 lg:pl-16'>
         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
@@ -37,7 +37,28 @@ export default function Home() {
               More info
             </button>
           </div>
+        </div>
 
+        <div className='flex-col space-y-4'>
+          <div className='-ml-2 flex'>
+            <h2 className='inline-flex items-center text-2xl font-bold'>
+              Featured
+            </h2>
+          </div>
+          <div className='-ml-8 flex space-x-4 overflow-x-scroll p-6 scrollbar-hide'>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+              <div key={index} className='
+                group lg:h-[16rem] min-w-[200px] relative transform bg-gradient-to-t from-transparent to-black transition duration-200 ease-in hover:scale-110 sm:h-36 rounded
+                '>
+                <Image
+                  src="/item_1.jpg"
+                  alt="Stranger Things"
+                  className='rounded'
+                  fill={true}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
