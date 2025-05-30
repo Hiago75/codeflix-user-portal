@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Header from './components/Header'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { PlayIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
   return (
@@ -25,11 +27,13 @@ export default function Home() {
           </p>
 
           <div className='flex space-x-3'>
-            <button className='bg-white text-black md:text-xl cursor-pointer items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:px-8 md:py-2.5'>
+            <button className='flex bg-white text-black md:text-xl cursor-pointer items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:px-8 md:py-2.5'>
+              <PlayIcon className='h-6' />
               Play
             </button>
 
-            <button className='bg-gray-600 text-black md:text-xl cursor-pointer items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:px-8 md:py-2.5'>
+            <button className='flex bg-gray-600 text-black md:text-xl cursor-pointer items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:px-8 md:py-2.5'>
+              <InformationCircleIcon className='h-6' />
               More info
             </button>
           </div>
