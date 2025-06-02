@@ -3,11 +3,11 @@ import { AuthForm } from '@/app/components/AuthForm';
 import { InputField } from '../InputField';
 
 
-export default function LoginForm() {
+export default function RegisterForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    alert('submit from login');
+    alert('submit from register');
     e.preventDefault();
   };
 
-  return <AuthForm formType='login' onSubmit={handleSubmit} />;
+  return <AuthForm formType='register' onSubmit={handleSubmit} />;
 }
