@@ -12,7 +12,7 @@ export const getFeaturedMovie = async (id: string): Promise<Movie> => {
 export const getMoviesByGenre = async (
   genre: string,
   options?: RequestOptions
-): Promise<Movies> => {
+): Promise<Movie[]> => {
   return apiRequest(
     'movies',
     { genres_like: encodeURIComponent(genre) },
