@@ -34,8 +34,8 @@ export default function Banner({ movie }: { movie: Movie }) {
 
       <div className='flex space-x-3'>
         <Link
-          href={`/watch/${movie.id}}`
-          }>
+          href={`/watch/${movie.id}`}
+        >
           <button className='flex bg-white text-black md:text-xl cursor-pointer items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:px-8 md:py-2.5'>
             <PlayIcon className='h-6' />
             Play
@@ -47,6 +47,6 @@ export default function Banner({ movie }: { movie: Movie }) {
           More info
         </button>
       </div>
-    </div>
+    </div >
   )
 }
