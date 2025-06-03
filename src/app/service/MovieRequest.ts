@@ -23,8 +23,10 @@ export const getMoviesByGenre = async (
 export async function searchMovies(
   title: string = '',
   genre: string = '',
-  options?: RequestOptions
-): Promise<Movies> {
+  options: RequestOptions = {
+    _limit: 100,
+  }
+): Promise<Movie[]> {
   const query: Record<string, string> = {
     title_like: title,
   };
@@ -33,5 +35,5 @@ export async function searchMovies(
     query.genres_like = genre;
   }
 
-  return apiRequest<Movies>('movies', query, options);
+  return apiRequest<Movie[]>('movies', query, options);
 }
